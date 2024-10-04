@@ -1,0 +1,81 @@
+:root {
+    --first-family: "Cormorant Upright", system-ui;
+    --second-family: "Open Sans", system-ui;
+}
+
+body {
+    font-family: var(--first-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+    background-color: #0c0b08;
+    color: #fff;
+}
+
+.container {
+    max-width: 1340px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.container-big {
+    max-width: 1720px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.header {
+    font-family: var(--second-family);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 20px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.nav__list {
+    display: flex;
+    gap: 0 32px;
+    align-items: center;
+}
+
+.nav__list>li>a {
+    text-transform: capitalize;
+    letter-spacing: 0.04em;
+    transition: .4s;
+}
+
+.nav__list>li>a:hover {
+    color: #dcca87;
+    transition: .4s;
+}
+
+.header__links>a {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+}
+
+.header__links>a:first-child {
+    position: relative;
+    padding-right: 50px;
+    margin-right: 50px;
+}
+
+.header__links>a:first-child::after {
+    content: url("../images/svg/line-vertical.svg");
+    position: absolute;
+    right: 0;
+    top: -17.5px;
+    width: 1px;
+    height: 57px;
+}
