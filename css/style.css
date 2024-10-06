@@ -33,6 +33,24 @@ body {
     display: flex;
 }
 
+.button-yellow {
+
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #0c0b08;
+    padding: 8px 0;
+    width: 157px;
+    text-align: center;
+    display: inline-block;
+    background: #dcca87;
+    transition: .4s;
+}
+
+.button-yellow:hover {
+    transform: scale(1.05);
+    transition: .4s;
+}
+
 .header {
     font-family: var(--second-family);
     display: grid;
@@ -181,23 +199,6 @@ h1 {
     padding-bottom: 32px;
 }
 
-.intro__content>a {
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    color: #0c0b08;
-    padding: 8px 0;
-    width: 157px;
-    text-align: center;
-    display: inline-block;
-    background: #dcca87;
-    transition: .4s;
-}
-
-.intro__content>a:hover {
-    transform: scale(1.05);
-    transition: .4s;
-}
-
 .intro>div>div:last-child {
     width: 51%;
 }
@@ -274,4 +275,83 @@ h1 {
     display: block;
     top: -72px;
     left: 30px;
+}
+
+.about {
+    background-image: url(../images/about/back.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0 136px;
+    position: relative;
+}
+
+.about>img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.about__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 74px;
+    position: relative;
+    z-index: 2;
+}
+
+.about__inner>div {
+    flex: 1 1 40%;
+}
+
+.about__inner {
+    flex: 1 1 fit-content;
+}
+
+.about__inner>div:first-child {
+    text-align: end;
+}
+
+.about__inner>div:last-child {
+    text-align: start;
+}
+
+.about__inner>div>div {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    color: #dcca87;
+    padding-bottom: 8px;
+    position: relative;
+}
+
+.about__inner>div>img {
+    display: block;
+    width: 40px;
+    height: auto;
+}
+
+.about__inner>div:first-child>img {
+    position: relative;
+    transform: rotate(-180deg);
+    left: calc(100% - 40px);
+    padding-top: 32px;
+}
+
+.about__inner>div:last-child>img {
+    position: relative;
+    padding-bottom: 32px;
+    left: 0;
+}
+
+.about__inner>div>p {
+    font-family: var(--second-family);
+    letter-spacing: 0.04em;
+    color: #aaa;
+    padding-bottom: 32px;
 }
