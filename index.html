@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-tablet.css">
     <link rel="stylesheet" href="css/style-mobile.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -37,29 +38,45 @@
         </header>
 
         <main>
-            <section class="intro container-big">
-                <div>
-                    <ul class="intro__links">
-                        <li><a href="">#Bar</a></li>
-                        <li><a href="index.html">#Gericht</a></li>
-                    </ul>
-                    <div class="intro__content">
-                        <p>
-                            <span>Chase the new Flavour</span>
-                            <img src="images/svg/spoon.svg" alt="spoon">
-                        </p>
-                        <h1>The key to Fine dining</h1>
-                        <p>Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam
-                            scelerisque sapien. Et, penatibus aliquam amet tellus </p>
-                        <a href="#">Explore Menu</a>
+            <section class="intro">
+                <div class="intro__inner container-big">
+                    <div>
+                        <ul class="intro__links">
+                            <li><a href="">#Bar</a></li>
+                            <li><a href="index.html">#Gericht</a></li>
+                        </ul>
+                        <div class="intro__content">
+                            <p>
+                                <span>Chase the new Flavour</span>
+                                <img src="images/svg/spoon.svg" alt="spoon">
+                            </p>
+                            <h1>The key to Fine dining</h1>
+                            <p>Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis
+                                quam
+                                scelerisque sapien. Et, penatibus aliquam amet tellus </p>
+                            <a href="#">Explore Menu</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="intro__slider">
+                            <img src="images/intro/1.png" alt="img slide">
+                            <img src="images/intro/2.png" alt="img slide">
+                            <img src="images/intro/3.png" alt="img slide">
+                            <img src="images/intro/4.png" alt="img slide">
+                        </div>
                     </div>
                 </div>
-                <div></div>
+                <div class="container">
+                    <div class="intro__pagination"></div>
+                    <button class="intro__button">Scroll</button>
+                </div>
             </section>
         </main>
     </div>
 
-    <script src="ts/main.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="module" src="ts/main.js"></script>
 </body>
 
 </html>

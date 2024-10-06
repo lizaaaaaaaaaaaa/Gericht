@@ -25,6 +25,14 @@ body {
     margin: 0 auto;
 }
 
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-track {
+    display: flex;
+}
+
 .header {
     font-family: var(--second-family);
     display: grid;
@@ -99,15 +107,21 @@ nav {
 }
 
 .intro {
-    display: flex;
-    align-items: center;
-    gap: 0 20px;
+    padding: 48px 0 148px;
+    overflow: hidden;
 }
 
-.intro>div:first-child {
+.intro__inner {
+    display: flex;
+    align-items: center;
+    gap: 0 180px;
+}
+
+.intro>div>div:first-child {
     width: fit-content;
     display: flex;
-    gap: 0 158px;
+    justify-content: space-between;
+    gap: 0 20px;
     align-items: center;
 }
 
@@ -129,6 +143,7 @@ nav {
 
 .intro__content {
     max-width: 454px;
+    min-width: 454px;
 }
 
 .intro__content>p:first-of-type {
@@ -181,4 +196,82 @@ h1 {
 .intro__content>a:hover {
     transform: scale(1.05);
     transition: .4s;
+}
+
+.intro>div>div:last-child {
+    width: 51%;
+}
+
+.intro__slider {
+    width: 667px;
+    overflow: hidden;
+}
+
+.intro__slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    padding: 0 5px;
+}
+
+.intro__pagination {
+    margin: 64px auto 0;
+    text-align: center;
+}
+
+.intro__pagination .slick-dots {
+    display: flex;
+    gap: 0 8px;
+}
+
+.intro__pagination .slick-dots li button {
+    position: relative;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.intro__pagination .slick-dots li button::before {
+    content: "0";
+}
+
+.intro__pagination .slick-dots li.slick-active button {
+    margin-right: 24px;
+    transition: .2s;
+}
+
+.intro__pagination .slick-dots li.slick-active button::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 16px;
+    height: 1.3px;
+    background-color: #dcca87;
+    left: 22px;
+    top: 13px;
+    transition: .2s;
+}
+
+.intro>div:last-child {
+    position: relative;
+}
+
+.intro__button {
+    position: absolute;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #dcca87;
+    right: 20px;
+    bottom: 0;
+    vertical-align: bottom;
+}
+
+.intro__button::before {
+    content: url(../images/svg/line-yellow.svg);
+    position: absolute;
+    display: block;
+    top: -72px;
+    left: 30px;
 }
