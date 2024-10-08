@@ -34,7 +34,6 @@ body {
 }
 
 .button-yellow {
-
     font-weight: 700;
     letter-spacing: 0.04em;
     color: #0c0b08;
@@ -49,6 +48,22 @@ body {
 .button-yellow:hover {
     transform: scale(1.05);
     transition: .4s;
+}
+
+.appearance-top {
+    animation: topAppearance .3s linear 1 forwards;
+}
+
+.delay-2 {
+    animation-delay: .2s;
+}
+
+.delay-3 {
+    animation-delay: .3s;
+}
+
+.delay-4 {
+    animation-delay: .4s;
 }
 
 .header {
@@ -174,6 +189,7 @@ nav {
     flex-direction: column;
     gap: 8px 0;
     padding-bottom: 8px;
+    opacity: 0;
 }
 
 .intro__content>p:first-of-type>img {
@@ -190,6 +206,7 @@ h1 {
     text-transform: capitalize;
     color: #dcca87;
     padding-bottom: 32px;
+    opacity: 0;
 }
 
 .intro__content>p:last-of-type {
@@ -197,6 +214,11 @@ h1 {
     letter-spacing: 0.04em;
     color: #aaa;
     padding-bottom: 32px;
+    opacity: 0;
+}
+
+.intro__content>a {
+    opacity: 0;
 }
 
 .intro>div>div:last-child {
@@ -354,4 +376,20 @@ h1 {
     letter-spacing: 0.04em;
     color: #aaa;
     padding-bottom: 32px;
+}
+
+@keyframes topAppearance {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

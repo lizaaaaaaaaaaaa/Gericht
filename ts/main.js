@@ -16,6 +16,17 @@ introSlider.slick({
     adaptiveHeight: true,
     appendDots: $(".intro__pagination"),
     autoplay: true,
-    autoplaySpeed: 4000
+    autoplaySpeed: 4000,
 });
-const introPagItem = document.querySelectorAll(".intro__pagination button");
+const introContent = document.querySelector(".intro__content");
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        // якщо елемент знаходиться в полі зору
+        if (entry.isIntersecting) {
+            for (const child of entry.target.children) {
+                child.classList.add("appearance-top");
+            }
+        }
+    });
+}, { threshold: 0.1 });
+observer.observe(introContent);
