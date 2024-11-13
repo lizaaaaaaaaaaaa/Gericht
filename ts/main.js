@@ -28,5 +28,7 @@ const observer = new IntersectionObserver((entries) => {
             }
         }
     });
-}, { threshold: 0.1 });
+}, { threshold: 0.1 }); // спостереження має відбуватися, коли видно хоча б 10% елемента
 observer.observe(introContent);
+const abouts = document.querySelectorAll(".about__inner div");
+abouts.forEach(about => observer.observe(about));

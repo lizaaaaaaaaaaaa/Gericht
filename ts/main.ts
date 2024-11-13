@@ -39,3 +39,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 }); // спостереження має відбуватися, коли видно хоча б 10% елемента
 
 observer.observe(introContent);
+
+const abouts = document.querySelectorAll<HTMLDivElement>(".about__inner div");
+
+abouts.forEach(about => observer.observe(about));

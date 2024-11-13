@@ -333,6 +333,10 @@ h1 {
     flex: 1 1 fit-content;
 }
 
+.about__inner>div>img {
+    opacity: 0;
+}
+
 .about__inner>div:first-child {
     text-align: end;
 }
@@ -352,22 +356,24 @@ h1 {
     position: relative;
 }
 
+.about__title {
+    opacity: 0;
+}
+
 .about__inner>div>img {
     display: block;
     width: 40px;
     height: auto;
+    padding-bottom: 32px;
 }
 
 .about__inner>div:first-child>img {
     position: relative;
-    transform: rotate(-180deg);
     left: calc(100% - 40px);
-    padding-top: 32px;
 }
 
 .about__inner>div:last-child>img {
     position: relative;
-    padding-bottom: 32px;
     left: 0;
 }
 
@@ -376,6 +382,11 @@ h1 {
     letter-spacing: 0.04em;
     color: #aaa;
     padding-bottom: 32px;
+    opacity: 0;
+}
+
+.about__inner>div>a {
+    opacity: 0;
 }
 
 @keyframes topAppearance {
